@@ -45,11 +45,14 @@ include_once("dados.php");
 	      </tr>
 	    </thead>
 	    <tbody>
-	      	<?php foreach($clientes as $cliente) {?>
+	      	<?php foreach($clientes as $cliente) {
+                  $documento = ($cliente->getTipo() == 'Pessoa Fisica') ? $cliente->getCpf() : $cliente->getCnpj();
+                 
+          ?>        
 	      	<tr>
             <td><?php echo "<a href='show.php?cliente=".$cliente->getId(). "'>".$cliente->getId()."</a>";?></td>
 		        <td><?php echo "<a href='show.php?cliente=".$cliente->getId(). "'>".$cliente->getNome()."</a>";?></td>
-		        <td><?php echo "<a href='show.php?cliente=".$cliente->getId(). "'>".$cliente->getCpf()."</a>";?></td>
+		        <td><?php echo "<a href='show.php?cliente=".$cliente->getId(). "'>".$documento."</a>";?></td>
 		      </tr>    
 	        <?php } ?>
 	    </tbody>

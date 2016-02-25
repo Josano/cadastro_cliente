@@ -1,20 +1,27 @@
 <?php
 
-class Cliente
-{
-	public $id;
-	public $nome;
-	public $cpf;
-	public $endereco;
-	public $estado;
+require_once "ClienteInterface.php";
 
-	public function __construct($id, $nome, $cpf, $endereco, $estado)
+class Cliente implements ClienteInterface
+{
+	protected $id;
+	protected $nome;
+	protected $endereco;
+	protected $sexo;
+	protected $grau;
+	protected $tipo;
+	protected $enderecoCobranca;
+
+
+	public function __construct($id, $nome, $sexo, $endereco, $grau, $tipo, $enderecoCobranca )
 	{
-		$this->id 	    	= $id;
-		$this->nome 	    = $nome;
-		$this->cpf    		= $cpf;
-		$this->endereco 	= $endereco;
-		$this->estado       = $estado;
+		$this->setId($id)
+			 ->setNome($nome)
+			 ->setSexo($sexo)
+		     ->setEndereco($endereco)
+		     ->setGrau($grau)
+		     ->setTipo($tipo)
+		     ->setEnderecoCobranca($enderecoCobranca);
 	}
 
 	public function getId(){
@@ -23,6 +30,7 @@ class Cliente
 
 	public function setId($id){
 		$this->id = $id;
+		return $this;
 	}
 
 	public function getNome(){
@@ -31,29 +39,60 @@ class Cliente
 
 	public function setNome($nome){
 		$this->nome = $nome;
+		return $this;
 	}		
 
-	public function getCpf(){
+	public function getSexo(){
 		return $this->cpf;
 	}
 
-	public function setCpf($cpf){
-		$this->cpf = $cpf;
+	public function setSexo($sexo){
+		$this->sexo = $sexo;
+		return $this;
 	}	
+
 
 	public function getEndereco(){
 		return $this->endereco;
-	}
+	}	
 
 	public function setEndereco($endereco){
 		$this->endereco = $endereco;
-	}	
-
-	public function getEstado(){
-		return $this->estado;
+		return $this;
 	}
 
-	public function setEstado($estado){
-		$this->estado = $estado;
-	}		
+	public function getGrau(){
+		return $this->grau;
+	}
+
+	public function setGrau($grau){
+		$this->grau = $grau;
+		return $this;		
+
+	}
+
+	public function getTipo(){
+		return $this->tipo;
+	}
+
+	public function setTipo($tipo){
+		$this->tipo = $tipo;
+		return $this;		
+
+	}			
+
+	public function getEnderecoCobranca(){
+		return $this->enderecoCobranca;
+	}
+
+	public function setEnderecoCobranca($enderecoCobranca){
+		//SE ENDERECO DE COBRANCA FOR VAZIO O CLIENTE RECEBE O PROPRiO ENDERECO COMO ENDERECO COBRANCA
+		if($enderecoCobranca != ''){
+			$this->enderecoCobranca = $enderecoCobranca;
+			return $this;		
+		}else{
+			$this->enderecoCobranca = $this->getEndereco();
+			return $this;	
+		}				
+	}	
 }

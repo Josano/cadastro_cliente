@@ -2,6 +2,8 @@
 
 include_once("dados.php");
 
+$tipoCliente = ($clientes[$_GET["cliente"]]->getTipo() == 'Pessoa Fisica') ? 'CPF': 'CNPJ';
+
 ?>
 <!DOCTYPE html>
 <html  lang="PT-Br">
@@ -17,13 +19,15 @@ include_once("dados.php");
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Dados Completos:</h3>
+                <h3 class="panel-title">Dados Completos</h3>
             </div>
             <div class="panel-body">
+                <p><b>Tipo Cliente:</b> <?php echo $clientes[$_GET["cliente"]]->getTipo() ?></p>
                 <p><b>Nome Completo:</b> <?php echo $clientes[$_GET["cliente"]]->getNome(); ?></p>
-                <p><b>Cpf:</b> <?php echo $clientes[$_GET["cliente"]]->getCpf(); ?></p>
+                <p><b><?=$tipoCliente?>:</b> <?php echo ($clientes[$_GET["cliente"]]->getTipo() == 'Pessoa Fisica') ? $clientes[$_GET["cliente"]]->getCpf() : $clientes[$_GET["cliente"]]->getCnpj(); ?></p>
+                <p><b>Grau de Importancia:</b> <?php echo $clientes[$_GET["cliente"]]->getGrau(); ?></p>
                 <p><b>Endereço:</b> <?php echo $clientes[$_GET["cliente"]]->getEndereco(); ?></p>
-               <p><b>CPF:</b> <?php echo $clientes[$_GET["cliente"]]->getCpf() ?></p>
+                <p><b>EnderecoCobranca:</b> <?php echo $clientes[$_GET["cliente"]]->getEnderecoCobranca(); ?></p>
             </div>
         </div>
     </div>

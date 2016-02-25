@@ -26,18 +26,3 @@ $clientes = array(
  						  "Pessoa Juridica", "Rua Belga, nº 333 - Barreiras, Ilhéus-BA") 	
 
 );
-
-
-/*10.496.388/0001-17
-32.498.895/0001-22
-11.121.515/0001-66
-36.654.247/0001-79
-05.613.618/0001-40
-
-($cnpj,$id, $nome, $sexo, $endereco, $grau, "Pessoa Fisica", $enderecoCobranca);
-
- 	6 => new Cliente(6,"Eva Alves", "212.413.001-01", "Rua Pará de Minas, nº 354 - Centro, Contagem-MG"),
- 	7 => new Cliente(7,"Joaquim Costa", "301.102.301-01", "Rua E, nº 256 - Centro, Camacan-BA"),
- 	8 => new Cliente(8,"Eliomar Morais", "103.054.193-01", "Rod. Ilhéus-Itabuna, SN - Salobrinho, Ilhéus-BA"),
- 	9 => new Cliente(9,"Carla Amaral", "123.789.257-79", "Rua F, nº 123 - Centro, Ilhéus-BA"),
- 	10 => new Cliente(10,"Jeniffer Araújo", "231.321.412-01", "Rua G, nº 314 - Centro, Salvador-BA"),*/

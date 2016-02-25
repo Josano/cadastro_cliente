@@ -6,5 +6,5 @@ interface ClienteInterface
 	public function setGrau($grau);
 
 	public function getEnderecoCobranca();
-	public function setEnderecoCobranca($endereco);
+	public function setEnderecoCobranca($endereco); 
 }

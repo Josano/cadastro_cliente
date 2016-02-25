@@ -24,6 +24,6 @@ class PessoaFisica extends Cliente {
 
     public function getCpf()
     {
-        return $this->cpf;
+        return $this->cpf; 
     }
 } 

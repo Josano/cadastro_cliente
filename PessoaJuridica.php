@@ -24,6 +24,6 @@ class PessoaJuridica extends Cliente {
 
     public function getCnpj()
     {
-        return $this->cnpj;
+        return $this->cnpj; 
     }
 } 

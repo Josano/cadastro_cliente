@@ -5,15 +5,15 @@ Fase 1
 
 Cadastro de clientes
 
-- Crie uma classe com os principais atributos que um cliente deve ter, como nome, cpf, endereço, etc.
+- Crie uma classe com os principais atributos que um cliente deve ter, como nome, cpf, endereÃ§o, etc.
 
 - Crie um array de objetos de clientes, com 10 clientes dentro.
 
-- Crie uma página e faça a listagem geral dos clientes. Quando clicar sobre o cliente, você deverá mostrar os dados específicos do cliente selecionado.
+- Crie uma pÃ¡gina e faÃ§a a listagem geral dos clientes. Quando clicar sobre o cliente, vocÃª deverÃ¡ mostrar os dados especÃ­ficos do cliente selecionado.
 
-- Nessa listagem você também deverá ter a opção de ordenar os clientes pelo seu índice de forma ascendente e descendente.
+- Nessa listagem vocÃª tambÃ©m deverÃ¡ ter a opÃ§Ã£o de ordenar os clientes pelo seu Ã­ndice de forma ascendente e descendente.
 
-Não se esqueça de caprichar na interface utilizando o twitter bootstrap.
+NÃ£o se esqueÃ§a de caprichar na interface utilizando o twitter bootstrap.
 
 
 Fase 2
@@ -21,12 +21,29 @@ Fase 2
 
 Tipos de clientes
 
-Agora que você já tem seu cadastro de cliente, você deverá também aceitar clientes Pessoa Jurídica em sua listagem.
+Agora que vocÃª jÃ¡ tem seu cadastro de cliente, vocÃª deverÃ¡ tambÃ©m aceitar clientes Pessoa JurÃ­dica em sua listagem.
 
-Não se esqueça de trabalhar com os modificadores de acesso e os getters e setters.
+NÃ£o se esqueÃ§a de trabalhar com os modificadores de acesso e os getters e setters.
 
-No momento da listagem dos clientes, você deve indicar em uma das colunas se o cliente é pessoa física ou jurídica.
+No momento da listagem dos clientes, vocÃª deve indicar em uma das colunas se o cliente Ã© pessoa fÃ­sica ou jurÃ­dica.
 
-Ambos os tipos devem implementar uma interface onde seja possível classificar o grau de importância do cliente para a empresa (ex: cliente 1,2,3,5 estrelas).
+Ambos os tipos devem implementar uma interface onde seja possÃ­vel classificar o grau de importÃ¢ncia do cliente para a empresa (ex: cliente 1,2,3,5 estrelas).
 
-Você também terá a opção de criar clientes que utilizão endereço específico de cobrança, nesse caso, crie uma interface para que esses tipos de clientes possam implementar.
+VocÃª tambÃ©m terÃ¡ a opÃ§Ã£o de criar clientes que utilizÃ£o endereÃ§o especÃ­fico de cobranÃ§a, nesse caso, crie uma interface para que esses tipos de clientes possam implementar.
+
+ï»¿
+RefatoraÃ§Ã£o
+
+Fase 3
+
+Refatore as classes utilizadas de seu projeto para que as mesmas trabalhem com namespaces.
+
+Verifique se dentro de seu projeto hÃ¡ a necessidade de se trabalhar com classes abstratas.
+
+NÃ£o se esqueÃ§a de criar a estrutura de diretÃ³rios, nome de arquivos e classes seguindo a PSR-0 (www.php-fig.org).
+
+FaÃ§a a implementaÃ§Ã£o do autoload para que vocÃª nÃ£o precise mais trabalhar com require/include para a chamada de suas classes.
+
+Deixe todo o fonte de sua aplicaÃ§Ã£o no mesmo nÃ­vel que o DocumentRoot do servidor web. Deixe a pasta que estÃ¡ visÃ­vel para web (seu DocumentRoot) apenas com o index.php e os demais assets(css, javascript e imagens).
+
+ 

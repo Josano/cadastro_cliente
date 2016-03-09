@@ -1,8 +1,10 @@
 <?php
 
+namespace src\ACME\Clientes\Interfaces;
+
 interface ClienteInterface
 {
-	namespace ACME\Clientes\Interfaces;
+	//namespace ACME\Clientes\Interfaces;
 
 	public function getGrau();
 	public function setGrau($grau);

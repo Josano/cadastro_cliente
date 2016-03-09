@@ -1,8 +1,8 @@
 <?php
 
-namespace ACME\Clientes\Types;
+namespace src\ACME\Clientes\Types;
 
-use ACME\Clientes\Types\Cliente;
+use src\ACME\Clientes\Cliente;
 
 class PessoaFisica extends Cliente {
 

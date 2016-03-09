@@ -1,8 +1,12 @@
 <?php
 
-namespace ACME\Clientes\Interfaces;
+namespace src\ACME\Clientes;
 
-use ACME\Clientes\Interfaces\ClienteInterface
+// namespace ACME\Clientes\Interfaces;
+
+// use ACME\Clientes\Interfaces\ClienteInterface
+
+use src\ACME\Clientes\Interfaces\ClienteInterface;
 
 class Cliente implements ClienteInterface
 {
